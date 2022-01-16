@@ -328,8 +328,8 @@ ul {
   left: 0;
   top: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 
@@ -390,7 +390,6 @@ ul {
 
 .form {
   width: 448px;
-  /* outline: 1px solid red; */
   margin-left: auto;
   margin-right: auto;
   padding: 40px 0;
@@ -401,14 +400,18 @@ ul {
   flex-direction: column;
   margin-bottom: 10px;
   text-align: left;
+
+  /* outline: 1px solid red; */
 }
 
 .form-input {
-  padding: 11px 12px;
+  padding: 11px 42px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
 }
 .form-label,
 .form-comment {
@@ -423,6 +426,7 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  padding: 12px 16px;
 }
 
 .form-comment-placeholder::placeholder {
@@ -430,7 +434,51 @@ ul {
   line-height: 16px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  padding: 12px 16px;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+.input-box {
+  position: relative;
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--hover-color);
+}
+
+.terms-item {
+  margin-top: 20px;
+}
+
+.terms-first {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+.terms-second {
+  color: var(--hover-color);
+}
+
+.modal-submit-button {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 55px;
+  color: var(--hero-color);
+  border-color: transparent;
+  margin-top: 30px;
+}
+
+.submit-button-box {
+  text-align: center;
 }
 
 /* Чем мы занимаемся */
