@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-Homework of Maxim Kovalenko #05
+# goit-markup-hw-06
+Homework of Maxim Kovalenko #06
